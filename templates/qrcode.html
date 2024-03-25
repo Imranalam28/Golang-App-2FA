@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5 text-center">
+    <h1 class="mb-3">Scan QR Code with Authenticator App</h1>
+    <!-- Example QR Code; replace src with your dynamic QR code source -->
+    <img src="https://chart.googleapis.com/chart?cht=qr&chl={{.OTPURL}}&chs=180x180&choe=UTF-8&chld=L|2" class="img-fluid mb-3" alt="QR Code">
+    <form action="/validate-otp" method="get">
+        <input type="hidden" name="username" value="{{.Username}}">
+        <button type="submit" class="btn btn-primary">I've Scanned the QR Code</button>
+    </form>
+</div>
+</body>
+</html>

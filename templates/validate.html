@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate OTP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-3">Enter OTP</h1>
+    <form action="/validate-otp" method="post" class="needs-validation">
+        <input type="hidden" name="username" value="{{.Username}}">
+        <div class="form-group">
+            <label for="otpCode">OTP Code:</label>
+            <input type="text" id="otpCode" name="otpCode" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Validate OTP</button>
+    </form>
+</div>
+</body>
+</html>
